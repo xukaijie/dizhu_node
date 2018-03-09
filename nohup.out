@@ -1,0 +1,250 @@
+
+> dizhu-price@0.0.0 start /usr/xukaijie/node/dizhu_price
+> babel-node ./bin/www --presets es2015,stage-2
+
+[0mGET /api/v1/userList [32m200 [0m8.713 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m2.341 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.985 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m1.027 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.565 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.574 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.635 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m1.240 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.596 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m2.675 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.577 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.571 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.895 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.577 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.504 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.593 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.637 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.590 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m4.214 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.674 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.577 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.563 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m19.833 ms - 133[0m
+[0mGET /api/v1/roomList [32m200 [0m4.976 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.597 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.602 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m4.606 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.549 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.360 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.568 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.346 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.736 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m1.082 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.312 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.521 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.367 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.557 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.373 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.577 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.744 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.581 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.559 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.591 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m1.796 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.485 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.527 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.506 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.525 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.200 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m1.952 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.557 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.623 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.539 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.642 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.589 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.194 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.512 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.136 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.510 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.843 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.508 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m1.865 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m4.112 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.693 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m5.611 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m1.492 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.649 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.213 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m1.074 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.501 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.267 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.487 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.486 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.211 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.540 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.145 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.701 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.087 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.522 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.555 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.372 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.503 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.297 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.540 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.560 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.187 ms - 133[0m
+[0mGET /api/v1/userList [32m200 [0m0.564 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.067 ms - 133[0m
+/createRoom
+[0mPOST /api/v1/createRoom [32m200 [0m21.066 ms - 41[0m
+[0mGET /api/v1/userList [32m200 [0m0.636 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.522 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m4.465 ms - 133[0m
+/createRoom
+{ name: 
+   { type: 'sureEvent',
+     timeStamp: 9674,
+     target: { id: '', dataset: {} },
+     currentTarget: { id: '', dataset: {} } } }
+[0mPOST /api/v1/createRoom [32m200 [0m11.392 ms - 59[0m
+[0mGET /api/v1/userList [32m200 [0m0.584 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.533 ms - 133[0m
+/createRoom
+[0mPOST /api/v1/createRoom [32m200 [0m0.725 ms - 41[0m
+[0mGET /api/v1/userList [32m200 [0m0.549 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.123 ms - 133[0m
+/createRoom
+[0mPOST /api/v1/createRoom [32m200 [0m0.675 ms - 41[0m
+[0mGET /api/v1/userList [32m200 [0m0.719 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.804 ms - 133[0m
+/createRoom
+[0mPOST /api/v1/createRoom [32m200 [0m0.727 ms - 41[0m
+
+> dizhu-price@0.0.0 start /usr/xukaijie/node/dizhu_price
+> babel-node ./bin/www --presets es2015,stage-2
+
+[0mGET /api/v1/userList [32m200 [0m8.400 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m20.935 ms - 133[0m
+/createRoom
+[0mPOST /api/v1/createRoom [32m200 [0m16.432 ms - 41[0m
+[0mGET /api/v1/userList [32m200 [0m1.864 ms - 117[0m
+[0mGET /api/v1/userList [32m200 [0m0.868 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m5.889 ms - 133[0m
+/createRoom
+[0mPOST /api/v1/createRoom [32m200 [0m1.572 ms - 41[0m
+[0mGET /api/v1/userList [32m200 [0m0.997 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m3.777 ms - 133[0m
+/createRoom
+{ name: 'dfe' }
+[0mPOST /api/v1/createRoom [32m200 [0m87.089 ms - 19[0m
+[0mGET /api/v1/roomList [32m200 [0m3.960 ms - 239[0m
+
+> dizhu-price@0.0.0 start /usr/xukaijie/node/dizhu_price
+> babel-node ./bin/www --presets es2015,stage-2
+
+Port 3007 is already in use
+
+npm ERR! Linux 3.10.0-514.6.2.el7.x86_64
+npm ERR! argv "/usr/bin/node" "/usr/bin/npm" "run" "start"
+npm ERR! node v6.12.0
+npm ERR! npm  v3.10.10
+npm ERR! code ELIFECYCLE
+npm ERR! dizhu-price@0.0.0 start: `babel-node ./bin/www --presets es2015,stage-2`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the dizhu-price@0.0.0 start script 'babel-node ./bin/www --presets es2015,stage-2'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the dizhu-price package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     babel-node ./bin/www --presets es2015,stage-2
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs dizhu-price
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls dizhu-price
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /usr/xukaijie/node/dizhu_price/npm-debug.log
+[0mGET /api/v1/userList [32m200 [0m0.601 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m4.472 ms - 239[0m
+
+> dizhu-price@0.0.0 start /usr/xukaijie/node/dizhu_price
+> babel-node ./bin/www --presets es2015,stage-2
+
+[0mGET /api/v1/userList [32m200 [0m8.504 ms - 117[0m
+[0mGET /api/v1/roomList [32m200 [0m29.984 ms - 53[0m
+[0mGET /api/v1/roomList [32m200 [0m5.303 ms - 53[0m
+[0mGET /api/v1/roomList [32m200 [0m6.196 ms - 53[0m
+
+> dizhu-price@0.0.0 start /usr/xukaijie/node/dizhu_price
+> babel-node ./bin/www --presets es2015,stage-2
+
+/usr/xukaijie/node/dizhu_price/node_modules/babel-core/lib/transformation/file/index.js:590
+      throw err;
+      ^
+
+SyntaxError: /usr/xukaijie/node/dizhu_price/routes/room.js: Unexpected token (75:58)
+  73 | router.get('/roomList', function(req, res, next) {
+  74 | 
+> 75 |     roomListTable.find({},{_id:0,owned:0,detail:0},{sort:{-createTime:1},limit:10},(err,result)=>{
+     |                                                           ^
+  76 | 
+  77 |         if (err) {
+  78 |             res.json({err:-1,message:"读取数据库错误"+result});
+    at Parser.pp$5.raise (/usr/xukaijie/node/dizhu_price/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/usr/xukaijie/node/dizhu_price/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp$3.parseIdentifier (/usr/xukaijie/node/dizhu_price/node_modules/babylon/lib/index.js:4332:10)
+    at Parser.pp$3.parsePropertyName (/usr/xukaijie/node/dizhu_price/node_modules/babylon/lib/index.js:4156:96)
+    at Parser.pp$3.parseObj (/usr/xukaijie/node/dizhu_price/node_modules/babylon/lib/index.js:4045:12)
+    at Parser.pp$3.parseExprAtom (/usr/xukaijie/node/dizhu_price/node_modules/babylon/lib/index.js:3719:19)
+    at Parser.pp$3.parseExprSubscripts (/usr/xukaijie/node/dizhu_price/node_modules/babylon/lib/index.js:3494:19)
+    at Parser.pp$3.parseMaybeUnary (/usr/xukaijie/node/dizhu_price/node_modules/babylon/lib/index.js:3474:19)
+    at Parser.pp$3.parseExprOps (/usr/xukaijie/node/dizhu_price/node_modules/babylon/lib/index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (/usr/xukaijie/node/dizhu_price/node_modules/babylon/lib/index.js:3381:19)
+
+npm ERR! Linux 3.10.0-514.6.2.el7.x86_64
+npm ERR! argv "/usr/bin/node" "/usr/bin/npm" "run" "start"
+npm ERR! node v6.12.0
+npm ERR! npm  v3.10.10
+npm ERR! code ELIFECYCLE
+npm ERR! dizhu-price@0.0.0 start: `babel-node ./bin/www --presets es2015,stage-2`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the dizhu-price@0.0.0 start script 'babel-node ./bin/www --presets es2015,stage-2'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the dizhu-price package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     babel-node ./bin/www --presets es2015,stage-2
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs dizhu-price
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls dizhu-price
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /usr/xukaijie/node/dizhu_price/npm-debug.log
+
+> dizhu-price@0.0.0 start /usr/xukaijie/node/dizhu_price
+> babel-node ./bin/www --presets es2015,stage-2
+
+Port 3007 is already in use
+
+npm ERR! Linux 3.10.0-514.6.2.el7.x86_64
+npm ERR! argv "/usr/bin/node" "/usr/bin/npm" "run" "start"
+npm ERR! node v6.12.0
+npm ERR! npm  v3.10.10
+npm ERR! code ELIFECYCLE
+npm ERR! dizhu-price@0.0.0 start: `babel-node ./bin/www --presets es2015,stage-2`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the dizhu-price@0.0.0 start script 'babel-node ./bin/www --presets es2015,stage-2'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the dizhu-price package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     babel-node ./bin/www --presets es2015,stage-2
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs dizhu-price
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls dizhu-price
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /usr/xukaijie/node/dizhu_price/npm-debug.log
