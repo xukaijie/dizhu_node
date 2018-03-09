@@ -14,10 +14,9 @@ var https = require('https');
 /*var privateKey  = fs.readFileSync('/Users/xukaijie/cer/private.pem', 'utf8');
  var certificate = fs.readFileSync('/Users/xukaijie/cer/file.crt', 'utf8');*/
 
-var privateKey  = fs.readFileSync('/etc/xukaijie/cer/private.pem', 'utf8');
-var certificate = fs.readFileSync('/etc/xukaijie/cer/file.crt', 'utf8');
-var credentials = {key: privateKey, cert: certificate,
-			secureOptions: constains.SSL_OP_TLSv1_2};
+var privateKey  = fs.readFileSync('/etc/xukaijie/cer/214534681880603.key', 'utf8');
+var certificate = fs.readFileSync('/etc/xukaijie/cer/214534681880603.pem', 'utf8');
+var credentials = {key: privateKey, cert: certificate};
 
 
 /**
