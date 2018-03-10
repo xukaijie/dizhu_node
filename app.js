@@ -12,6 +12,8 @@ var users = require('./routes/users');
 
 var rooms = require('./routes/room');
 
+var wolfs = require('./routes/wolf_kill');
+
 var app = express();
 
 // view engine setup
@@ -43,6 +45,8 @@ app.all('*',function (req, res, next) {
 app.use('/', index);
 app.use('/users', users);
 app.use('/api/v1', rooms);
+
+app.use('/api/wolf/v1', wolfs);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
