@@ -9,6 +9,8 @@ var qs = require('querystring');
 var wolfListTable = require('../common/mongodb').wolfListModel;
 var userListTable = require('../common/mongodb').userListModel;
 
+var adminListTable = require('../common/mongodb').adminListModel;
+
 var func = require('../common/func');
 
 
@@ -339,6 +341,28 @@ router.get('userInfo',function(req, res, next) {
 
     })
 })
+
+
+// 获取管理员列表
+
+router.get('/adminList',function(req, res, next) {
+
+
+    adminListTable.find({},{_id:0},(err,result)=>{
+
+        if (err){
+            res.json({err:-1,message:"读取数据库错误"});
+            return;
+        }else{
+
+            res.json({err:0,data:result})
+
+            return;
+        }
+
+    })
+})
+
 
 module.exports = router;
 

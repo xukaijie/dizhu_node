@@ -43,6 +43,14 @@ var userList = new mongoose.Schema({
 
 })
 
+var adminList = new mongoose.Schema({
+
+    openId:String, // 微信的openid
+
+})
+
+
+
 /*var subprod = new mongoose.Schema({
 
  name:String,
@@ -57,10 +65,13 @@ var roomListModel = conn.model('roomlist',roomList);
 var wolfListModel = conn.model('wolflist',wolfList);
 
 var userListModel = conn.model('userlist',userList);
+
+var adminListModel = conn.model('adminlist',adminList);
 module.exports = {
     roomListModel:roomListModel,
     wolfListModel:wolfListModel,
-    userListModel:userListModel
+    userListModel:userListModel,
+    adminListModel:adminListModel
 
 };
 
