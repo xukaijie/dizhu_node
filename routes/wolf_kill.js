@@ -63,18 +63,12 @@ router.get('/getWolfList', function(req, res, next) {
                     return;
                 }else{
 
-                    console.log(result);
-                    console.log(result2);
                     for (var k = 0;k<result.length;k++){
 
                         for (var j = 0;j<result2.length;j++){
 
-                            console.log(result2[j].openId,result[k].founder)
                             if (result2[j].openId === result[k].founder){
-                                console.log(result2[j].nickName);
-
                                 result[k].founder = result2[j].nickName;
-                                console.log(result[k]);
                             }
                         }
 
@@ -149,6 +143,8 @@ router.post('/sigIn', function(req, res, next) {
     var wolfId = req.body.wolfId;
     var openId = req.body.openId;
 
+    var _enter = {openId:openId,remark:req.body.remark || ""};
+
     wolfListTable.findOne({wolfId:wolfId},{limit:1,enterList:1},function(err,result){
 
         if (err){
@@ -165,7 +161,7 @@ router.post('/sigIn', function(req, res, next) {
                 return;
             }
 
-            wolfListTable.update({wolfId:wolfId},{'$addToSet':{enterList:openId}},function(err,result){
+            wolfListTable.update({wolfId:wolfId},{'$addToSet':{enterList:_enter}},function(err,result){
                 if (err){
                     res.json({err:-1,message:"写入数据库错误"});
                     return;
@@ -210,13 +206,30 @@ router.get('/wolfDetail',function(req, res, next) {
 
             var list = result.enterList;
 
-            userListTable.find({openId:{$in:list}},{_id:0},(err,result)=>{
+            var openList = list.map((l)=>{
+
+                return l.openId;
+            })
+
+            userListTable.find({openId:{$in:openList}},{_id:0},{lean:true},(err,result2)=>{
 
                 if (err){
                     res.json({err:-1,messgae:"读取用户表出错"});
                     return;
                 }else{
-                    res.json({err:0,data:{enterList:result}})
+
+                   for (var i = 0 ;i < result2.length;i++){
+
+                       result2[i].remark = "123";
+                       for (var k = 0;k<list.length;k++){
+
+                           if (list[k].openId === result2[i].openId)
+                               result2[i].remark = list[k].remark;
+                       }
+                   }
+                    res.json({err:0,data:{enterList:result2}});
+
+                    return;
                 }
             })
 
@@ -313,10 +326,81 @@ router.post('/openId',function(req, res, next) {
 
 
 
-// 目前只返回报名的人数
-router.get('userInfo',function(req, res, next) {
+router.get('/getAuthList',function(req, res, next) {
 
-    var params = ['openId'];
+
+    adminListTable.find({},{_id:0},{lean:true},(err,result)=>{
+
+        if (err){
+            res.json({err:-1,message:"读取数据库错误"});
+            return;
+        }else{
+
+            var ad = [];
+            var superAd = [];
+
+            for (var i = 0;i < result.length;i++){
+
+                if (result[i].isSuperAdmin !== true){
+
+                    ad.push(result[i].openId);
+                }else{
+
+                    superAd.push(result[i].openId);
+                }
+            }
+
+            userListTable.find({},{_id:0},{lean:true},(err,result2)=>{
+
+                if (err){
+
+                    res.json({err:-1,message:"操作数据库错误"});
+                    return;
+                }else {
+
+
+                    var res_ret = [];
+
+                    for (var i = 0; i < result2.length; i++) {
+
+
+                        if (superAd.indexOf(result2[i].openId) === -1){
+
+                            res_ret.push(result2[i]);
+                        }
+                    }
+
+
+                    for (var i = 0; i < res_ret.length; i++) {
+
+                        /*判断是不是管理员*/
+                        if (ad.indexOf(res_ret[i].openId) !== -1) {
+                            res_ret[i].isAdmin = true;
+                        } else {
+                            res_ret[i].isAdmin = false;
+                        }
+
+                    }
+
+
+                    res.json({err: 0, data: res_ret});
+
+                    return;
+                }
+
+
+            })
+
+            return;
+        }
+
+    })
+})
+
+
+router.post('/setAuthList',function(req, res, next) {
+
+    var params = ['openId',"value"];
 
     var ret = func.get_web_params(req,params);
 
@@ -325,23 +409,40 @@ router.get('userInfo',function(req, res, next) {
         return;
     }
 
-    var openId = req.query.openId;
+    var query = {
 
-    wolfListTable.findOne({openId:openId},{_id:0},(err,result)=>{
+        openId:req.body.openId,
+        isSuperAdmin:false
+    }
 
-        if (err){
-            res.json({err:-1,message:"读取数据库错误"});
-            return;
-        }else{
+    /*增加为管理员*/
+    if (req.body.value){
 
-            res.json({err:0,data:result})
+        adminListTable.update({openId:req.body.openId},query,{upsert:true},(err,result)=>{
+            if (err){
 
-            return;
-        }
+                res.json({err:-1,message:"操作数据库错误"});
+            }else {
+                res.json({err: 0});
+                return;
+            }
+        })
+    }else{
 
-    })
+        adminListTable.remove({openId:req.body.openId},(err)=>{
+            if (err){
+
+                res.json({err:-1,message:"操作数据库错误"});
+            }else {
+                res.json({err: 0});
+                return;
+            }
+        })
+
+        return;
+    }
+
 })
-
 
 // 获取管理员列表
 
@@ -362,6 +463,38 @@ router.get('/adminList',function(req, res, next) {
 
     })
 })
+
+
+// 获取管理员列表
+
+router.post('/deleteWolf',function(req, res, next) {
+
+
+
+    var params = ['wolfId'];
+
+    var ret = func.get_web_params(req,params);
+
+    if (ret.err){
+        res.json(ret);
+        return;
+    }
+
+    wolfListTable.remove({wolfId:req.body.wolfId},(err)=>{
+
+        if (err){
+            res.json({err:-1,message:"操作数据库错误"});
+            return;
+        }else{
+
+            res.json({err:0})
+
+            return;
+        }
+
+    })
+})
+
 
 
 module.exports = router;

@@ -40,13 +40,12 @@ var userList = new mongoose.Schema({
     nickName:String, // 昵称
 
     header:String, // 头像
-
 })
 
 var adminList = new mongoose.Schema({
 
     openId:String, // 微信的openid
-
+    isSuperAdmin:Boolean
 })
 
 
