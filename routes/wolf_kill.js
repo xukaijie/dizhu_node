@@ -13,10 +13,12 @@ var adminListTable = require('../common/mongodb').adminListModel;
 
 var func = require('../common/func');
 
+var env = require('../common/config')
 
-var appId = 'wx3b80b184bb167e6e';
 
-var appSecret = 'cff2ab052d0b3396b57d6cdd88eaccc5';
+var appId = env.appId;
+
+var appSecret = env.appSecret;
 
 
 function getWolfList(page,callback){
