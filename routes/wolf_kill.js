@@ -51,6 +51,12 @@ router.get('/getWolfList', function(req, res, next) {
         }
         else {
 
+            if (result.length === 0){
+
+                res.json({err:0,data:[]});
+                return;
+            }
+
             var founderArray = result.map((r)=>{
 
                 return r.founder;
@@ -152,6 +158,32 @@ router.post('/sigIn', function(req, res, next) {
             return;
         }else{
 
+
+            if (!result){
+
+                res.json({err:-1,message:"读取数据库错误"});
+                return;
+            }
+            /*if (result.length === 0){
+
+                res.json({err:-1,message:"读取数据库错误"});
+                return;
+            };*/
+
+            var alOpenIds = [];
+
+            alOpenIds = result.enterList.map((e)=>{
+
+                return e.openId;
+            })
+
+
+            if (alOpenIds.indexOf(openId) !== -1){
+
+                res.json({err:-1,message:"您已经报名"});
+                return;
+            }
+
             var currentCount = result.enterList.length;
             var limit = result.limit;
 
@@ -203,6 +235,13 @@ router.get('/wolfDetail',function(req, res, next) {
             res.json({err:-1,message:"读取数据库错误"});
             return;
         }else{
+
+            console.log(result);
+
+            if (!result){
+                res.json({err:-1,message:"读取数据库错误"});
+                return;
+            }
 
             var list = result.enterList;
 
@@ -418,11 +457,18 @@ router.post('/setAuthList',function(req, res, next) {
     /*增加为管理员*/
     if (req.body.value){
 
-        adminListTable.update({openId:req.body.openId},query,{upsert:true},(err,result)=>{
+        adminListTable.update({openId:req.body.openId},query,{upsert:false},(err,result)=>{
             if (err){
 
                 res.json({err:-1,message:"操作数据库错误"});
             }else {
+
+                if (result.nModified === 0){
+
+                    res.json({err:-1,message:"写入失败"});
+                    return;
+                }
+
                 res.json({err: 0});
                 return;
             }

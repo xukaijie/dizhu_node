@@ -100,7 +100,7 @@ router.get('/roomDetail', function(req, res, next) {
 
     var roomId = req.query.roomId;
 
-    roomListTable.find({roomId:roomId},{detail:1,_id:0},(err,result)=>{
+    roomListTable.findOne({roomId:roomId},{detail:1,_id:0},(err,result)=>{
 
         if (err) {
             res.json({err:-1,message:"读取数据库错误"+result});
@@ -108,7 +108,11 @@ router.get('/roomDetail', function(req, res, next) {
         }
         else{
 
+            if (!result){
 
+                res.json({err:-1,message:"读取数据库错误"});
+                return;
+            }
 
             var calc = result[0].detail;
 
@@ -157,11 +161,16 @@ router.post('/addOneRound', function(req, res, next) {
 
     var detail = req.body.detail;
 
-    roomListTable.update({roomId:roomId},{'$addToSet':{detail:detail}},{upsert:true},function(err,result){
+    roomListTable.update({roomId:roomId},{'$push':{detail:detail}},{upsert:true},function(err,result){
         if (err){
-            res.json({err:-1,message:"写入数据库错误"+result});
+            res.json({err:-1,message:"写入数据库错误",...result});
             return;
         }else{
+            if (result.nModified === 0){
+
+                res.json({err:-1,message:"写入失败",...result});
+                return;
+            }
             res.json({err:0});
             return;
         }
