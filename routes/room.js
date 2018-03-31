@@ -114,7 +114,7 @@ router.get('/roomDetail', function(req, res, next) {
                 return;
             }
 
-            var calc = result[0].detail;
+            var calc = result.detail;
 
             if (calc.length !== 0) {
 
