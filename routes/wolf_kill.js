@@ -459,18 +459,11 @@ router.post('/setAuthList',function(req, res, next) {
     /*增加为管理员*/
     if (req.body.value){
 
-        adminListTable.update({openId:req.body.openId},query,{upsert:false},(err,result)=>{
+        adminListTable.update({openId:req.body.openId},query,{upsert:true},(err,result)=>{
             if (err){
 
                 res.json({err:-1,message:"操作数据库错误"});
             }else {
-
-                if (result.nModified === 0){
-
-                    res.json({err:-1,message:"写入失败"});
-                    return;
-                }
-
                 res.json({err: 0});
                 return;
             }
