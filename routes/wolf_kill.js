@@ -252,6 +252,7 @@ router.get('/wolfDetail',function(req, res, next) {
                 return l.openId;
             })
 
+            // lean:true 设置 可修改返回结果
             userListTable.find({openId:{$in:openList}},{_id:0},{lean:true},(err,result2)=>{
 
                 if (err){

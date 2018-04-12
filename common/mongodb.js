@@ -50,6 +50,34 @@ var adminList = new mongoose.Schema({
 
 
 
+var consumeCategory = new mongoose.Schema({
+
+    categoryId:String, //
+    name:String,
+    userId:String, // 所属人员
+})
+
+
+var consumeList = new mongoose.Schema({
+
+    categoryId:String, //
+    consumeId:String,
+    addOrCut:Boolean, // 支出还是收入
+    price:Number, // money
+    remark:String, // 备注
+    userId:String, // 所属人员
+    createTime:String,
+    consumeTime:String,
+})
+
+
+var consumeUser = new mongoose.Schema({
+
+    userId:String, // userid
+    name:String,
+    password:String, // 密码
+})
+
 /*var subprod = new mongoose.Schema({
 
  name:String,
@@ -66,11 +94,22 @@ var wolfListModel = conn.model('wolflist',wolfList);
 var userListModel = conn.model('userlist',userList);
 
 var adminListModel = conn.model('adminlist',adminList);
+
+
+var consumeCategoryModel = conn.model('consumecategory',consumeCategory);
+
+var consumeListModel = conn.model('consumelist',consumeList);
+var consumeUserModel = conn.model('consumeuser',consumeUser);
+
+
 module.exports = {
     roomListModel:roomListModel,
     wolfListModel:wolfListModel,
     userListModel:userListModel,
-    adminListModel:adminListModel
+    adminListModel:adminListModel,
+    consumeCategoryModel,
+    consumeListModel,
+    consumeUserModel
 
 };
 
